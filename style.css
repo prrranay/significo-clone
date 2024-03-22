@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+:root{
+    --black:#000;
+    --white:#fff;
+    --salmon:#EF9D71;
+    --dsalmon:rgb(86, 68, 66);
+    --cyan:#AEDEE0;
+    --dcyan:rgb(50, 83, 83);
+}
+
+.vidodiv{
+    clip-path: circle(var(--clip) at 50% 50%);
+}
+*::selection{
+    background-color: var(--salmon);
+}
+body{
+    transition: background-color ease-out .5s;
+}
+body[theme="black"]{
+    background-color: var(--black);
+}
+body[theme="cyan"]{
+    background-color: var(--cyan);
+}
+body[theme="salmon"]{
+    background-color: var(--salmon);
+}
+body[theme="white"]{
+    background-color: var(--white);
+}
+body[theme="black"] .section{
+    color: var(--white);
+}
+body[theme="cyan"] .section{
+    color: var(--dcyan);
+}
+body[theme="salmon"] .section{
+    color: var(--dsalmon);
+}
+body[theme="white"] .section{
+    color:var(--black);
+}
